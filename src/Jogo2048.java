@@ -9,5 +9,25 @@ public class Jogo2048 {
         tabuleiro.iniciarJogo();
     }
 
+    public void jogar() {
+        Scanner scanner = new Scanner(System.in);
+        while (!tabuleiro.verificarFimDeJogo()) {
+            tabuleiro.imprimirTabuleiro();
+            System.out.println("Faça um movimento (w, s, a, d");
+            String movimento = scanner.nextLine();
+            if (!tabuleiro.movimentar(movimento)) {
+                System.out.println("Movimento inválido. Tente novamente");
+            }
+        }
+        tabuleiro.imprimirTabuleiro();
+        System.out.println("Fim do Jogo");
+        scanner.close();
+    }
+
+    public static void main(String[] args) {
+        Jogo2048 jogo = new Jogo2048();
+
+    }
+
 
 }
