@@ -25,8 +25,19 @@ public class Tabuleiro {
     }
 
     public void imprimirTabuleiro(){
+        for (int i = 0; i < TAMANHO; i++) {
+            for (int j = 0; j < TAMANHO; j++) {
+                System.out.print(tabuleiro[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public boolean movimentar (String direcao){
 
     }
+
 
 
 
