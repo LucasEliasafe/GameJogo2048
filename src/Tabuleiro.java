@@ -24,6 +24,10 @@ public class Tabuleiro {
         tabuleiro[linha][coluna] = random.nextInt(10) == 0 ? 4 : 2;
     }
 
+    public void imprimirTabuleiro(){
+
+    }
+
 
 
 
