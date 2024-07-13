@@ -60,7 +60,22 @@ public class Tabuleiro {
 
         }
 
-
+        public boolean verificarFimDeJogo(){
+            for (int i = 0; i < TAMANHO; i ++){
+                for (int j = 0; j < TAMANHO; j++) {
+                    if (tabuleiro[i][j] == 0){
+                        return false;
+                    }
+                    if (i < TAMANHO - 1 && tabuleiro[i][j] == tabuleiro[i + 1][j]){
+                        return false;
+                    }
+                    if (j < TAMANHO - 1 && tabuleiro[i][j] == tabuleiro[i][j+1]) {
+                        return false;
+                    }
+                }
+            }
+            return false;
+        }
     }
 
 
