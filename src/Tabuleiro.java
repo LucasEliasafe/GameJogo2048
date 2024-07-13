@@ -35,6 +35,31 @@ public class Tabuleiro {
     }
 
     public boolean movimentar (String direcao){
+        boolean movimentado = false;
+        Movimentos movimentos = new Movimentos(tabuleiro);
+        switch (direcao)  {
+            case "w":
+                movimentado = movimentos.moverParaCima();
+                break;
+            case "s":
+                movimentado = movimentos.moverParaBaixo();
+                break;
+            case "a":
+                movimentado = movimentos.moverParaEsquerda();
+                break;
+            case "d":
+                movimentado = movimentos.moverParaDireita();
+                break;
+            default:
+                System.out.println("Movimento inválido! Use w (cima) s (baixo), a (esquerda), d (direita).";
+        }
+        if (movimentado) {
+            adicionarNovoNumero();
+        }
+        return movimentado;
+
+        }
+
 
     }
 
@@ -42,4 +67,4 @@ public class Tabuleiro {
 
 
 
-}
+
