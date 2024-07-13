@@ -26,8 +26,8 @@ public class Jogo2048 {
 
     public static void main(String[] args) {
         Jogo2048 jogo = new Jogo2048();
+        jogo.jogar();
 
     }
-
 
 }
